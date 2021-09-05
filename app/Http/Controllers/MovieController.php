@@ -15,11 +15,17 @@ class MovieController extends Controller
     {
         $movies = Movie::all();
         return view('movies',compact('movies'));
-
+        
         foreach ($movies as $movie) {
             echo($movie);
         }
+        
     }
+
+    /**
+     * Se o indiano no tutorial no youtube não conseguir me ajudar
+     * eu não sei quem vai.
+     */
 
     /**
      * Show the form for creating a new resource.

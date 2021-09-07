@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Movie;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +14,6 @@ class Country extends Model
 
     public function movie()
     {
-        return $this->hasOne('App\Models\Movie');
+        return $this->hasOne(Movie::class);
     }
 }

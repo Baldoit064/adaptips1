@@ -16,14 +16,16 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::all();
-        return view('movies',compact('movies'));
+        $search = request('search');
+        if($search){
+            //$countries = Country::all();
+            $movies = Movie::where([['title', 'like', '%'.$search.'%']])->orWhere([['genre', 'like', '%'.$search.'%']])
+                ->orWhere([['release', 'like', '%'.$search.'%']])->get();
+        } else {
+            $movies = Movie::all();
+        }
+        return view('movies',compact('movies','search'));
     }
-
-    /**
-     * Se o indiano no tutorial no youtube não conseguir me ajudar
-     * eu não sei quem vai.
-     */
 
     /**
      * Show the form for creating a new resource.
@@ -108,6 +110,16 @@ class MovieController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $movie = Movie::find($id);
+
+        Storage::delete('public/'.$movie->image);
+        $movie->delete();
+
+        return redirect(route('movie.index'));
     }
+    
+    /**
+     * Se o indiano no tutorial no youtube não conseguir me ajudar
+     * eu não sei quem vai.
+     */
 }

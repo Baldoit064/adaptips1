@@ -19,7 +19,7 @@
         <input type="text" name="release" placeholder="Lançamento" required> 
         <input type="text" name="rating" placeholder="Nota" required> 
         <textarea name="synopsis" id="synopsis" cols="30" rows="10"></textarea>
-        <input type="file" name="image" accept='image/*' required > 
+        <input type="file" name="image" accept='image/*' required> 
         <button type="submit">Criar</button>
     </form>
     <a href="{{ route('movie.index') }}"><button>Voltar</button></a>

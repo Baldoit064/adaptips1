@@ -15,6 +15,3 @@ use App\Http\Controllers\MovieController;
 */
 
 Route::resource('movie', MovieController::class);
-
-
-

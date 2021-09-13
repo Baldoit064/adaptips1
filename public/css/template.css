@@ -1,0 +1,116 @@
+:root {
+    --main-color:#274A66;
+    --secondary-color:#D58E00;
+}
+
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100vw;
+    margin-bottom: 16px;
+    height: 7vh;
+    background-color: var(--main-color);
+    border-bottom: 3px solid black;
+}
+
+.logo{
+    padding-left: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.start{
+    margin-left: 65vw;
+    color: var(--secondary-color);
+    position: relative;
+    bottom: 24px;
+    font-weight: bold;
+}
+
+.navbar{
+    border-radius: 5px;
+    position: relative;
+    bottom: 24px;
+    height: 32px;
+    width: 200px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.nav-button{
+    border-radius: 5px;
+    position: relative;
+    height: 38px;
+    bottom: 18px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    margin-left: -12px;
+    font-weight: bold;
+}
+
+.create-button{ 
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 6px;
+    margin-top: 12.5px;
+    height: 38px;
+}
+
+.content{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    ". . . . ."; 
+}
+
+.movie-container{
+    text-align: center;
+    padding: 8px 0px;
+    background-color: var(--main-color);
+    color: white;
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+    border: 3px solid black;
+}
+
+p{
+    margin: 8px 0px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-message{
+    position: relative;
+    left: 4px;
+    top: 4px;
+}
+
+.movie-button{
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--main-color);
+    border-radius: 5px;
+    font-weight: bold;
+}

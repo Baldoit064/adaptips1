@@ -1,23 +1,32 @@
 @extends('template')
 
-@section('title', 'Criar Filme')
+@section('title', 'Adicionar Filme')
 
 @section('content')
 <div class="create-container">
-    <form id="form-create" action="{{ route('movie.store') }}" method="POST" enctype="multipart/form-data">
+    <form class="form-create" id="form-create" action="{{ route('movie.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="text" name="title" placeholder="Título" required> 
-        <input type="text" name="genre" placeholder="Gênero" required> 
-        <select name="country_id" id="country_id">
+        <label for="title">Título</label>
+        <input class="input-form" type="text" name="title" id="title" placeholder="Título" required> 
+        <label for="genre">Gênero</label>
+        <input class="input-form" type="text" name="genre" id="genre" placeholder="Gênero" required> 
+        <label for="country_id">País</label>
+        <select class="input-form" name="country_id" id="country_id" required>
+            <option value="" disabled selected>Escolha um País</option>
             @foreach ($countries as $country)
                 <option value="{{ $country->id }}">{{ $country->name }}</option>
             @endforeach
         </select>
-        <input type="text" name="release" placeholder="Data de Lançamento" required> 
-        <input type="text" name="rating" placeholder="Nota" required> 
-        <textarea name="synopsis" id="synopsis" cols="30" rows="10" required></textarea>
-        <input type="file" name="image" accept='image/*' required> 
-        <button type="submit">Criar</button>
+        <label for="release">Lançamento</label>
+        <input class="input-form" type="date" name="release" id="release" required> 
+        <label for="rating">Nota</label>
+        <input class="input-form" type="text" name="rating" id="rating" placeholder="Nota" required> 
+        <label for="synopsis">Sinopse</label>
+        <textarea class="input-form" name="synopsis" id="synopsis" cols="30" rows="10" required></textarea>
+        <label for="image">Imagem</label>
+        <input class="input-form" type="file" name="image" id="image" accept='image/*' required> 
+        <button class="button-form" type="submit">Criar Filme</button>
+        <a class="button-back" href="{{ route('movie.index') }}">Voltar</a>
     </form>
 </div>
 @endsection

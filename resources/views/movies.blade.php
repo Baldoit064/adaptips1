@@ -1,5 +1,9 @@
 @extends('template')
 
+@section('assets')
+<link rel="stylesheet" href="{{ asset('css/template.css') }}">
+@endsection
+
 @section('title', 'Filmes')
 
 @section('navbar')
@@ -28,11 +32,11 @@
             <p><strong>Sinopse:</strong> {{ $movie->synopsis }}</p>
         </div>  
         <div class="movie-card-button">
-            <a href="{{ route('movie.edit', $movie->id) }}"><button class="movie-button">Editar</button></a>
+            <a href="{{ route('movie.edit', $movie->id) }}"><button class="movie-button">EDITAR</button></a>
             <form action="{{ route('movie.destroy', $movie->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="movie-button">Deletar</button>
+                <button type="submit" class="movie-button">DELETAR</button>
             </form>
         </div>
     </div>

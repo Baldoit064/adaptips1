@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="shortcut icon" href="images/icon.svg" type="image/svg">
-    <link rel="stylesheet" href="{{ asset('css/template.css') }}">
+    @yield('assets')
 
     <title>@yield('title') | Adapti</title>
 

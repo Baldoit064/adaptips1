@@ -39,11 +39,17 @@
 
     <footer class="footer-container">
         <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="footer-logo">
-        <img src="{{ asset('images/facebook.svg') }}" alt="facebook icon" class="footer-icon">
-        <img src="{{ asset('images/instagram.svg') }}" alt="instagram icon" class="footer-icon">
-        <img src="{{ asset('images/linkedin.svg') }}" alt="linkedin icon" class="footer-icon">
+        <a href="https://twitter.com/baldollynho" target="_blank">
+            <img src="{{ asset('images/twitter.svg') }}" alt="twitter icon" class="footer-icon">
+        </a>
+        <a href="https://www.instagram.com/n.cremasco/" target="_blank">
+            <img src="{{ asset('images/instagram.svg') }}" alt="instagram icon" class="footer-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/nicolas-resende/" target="_blank">
+            <img src="{{ asset('images/linkedin.svg') }}" alt="linkedin icon" class="footer-icon">
+        </a>    
         <p class="footer-message">
-            Desenvolvido com ❤ 2021 Adapti-Soluções Web
+            Desenvolvido por Nicolas Resende - Processo Seletivo 2021/2 Adapti-Soluções Web
         </p>
     </footer>
 

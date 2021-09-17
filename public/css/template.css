@@ -1,6 +1,6 @@
 :root {
     --main-color:#274A66;
-    --main-color-dark:#2C4153;
+    --main-color-dark:#2A3040;
     --secondary-color:#FFAA00;
 }
 
@@ -43,7 +43,7 @@
 .start{
     margin-left: 16px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     color: var(--secondary-color);
     text-decoration: none;
 }
@@ -63,10 +63,9 @@
     background-color: var(--secondary-color);
     color: white;
     height: 40px;
-    padding: 8px 12px;
-    font-size: 20px;
+    padding: 0px 12px;
+    font-size: 24px;
     cursor: pointer;
-    border-color: var(--main-color-dark);
     border-radius: 5px;
 }
 
@@ -174,7 +173,7 @@ label{
 }
 
 .content{
-    margin-bottom: 96px;
+    margin-bottom: 112px;
     margin-left: 16px;
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -192,6 +191,7 @@ label{
 }
 
 .movie-card{
+    transition: 0.2s all ease-in;
     word-break: break-all;
     box-shadow: 0px 0px 5px black;
     width: 100%;
@@ -205,6 +205,7 @@ label{
 }
 
 .movie-card:hover{
+    transition: 0.2s all ease-in;
     transform: scale(1.025, 1.025);
 }
 
@@ -220,10 +221,7 @@ label{
 }
 
 .movie-card-button{
-    margin-left: 1px;
-    margin-right: 1px;
     margin-top: -8px;
-    gap: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -236,6 +234,7 @@ label{
     margin: 3px 0px;
     background-color: var(--secondary-color);
     color: white;
+    border: 1px solid black;
     padding: 5px;
     font-weight: bold;
 }
@@ -262,8 +261,8 @@ label{
 .footer-icon{
     cursor: pointer;
     padding-bottom: 6px;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
 }
 
 .footer-icon:hover{
@@ -272,15 +271,15 @@ label{
 }
 
 .footer-logo{
-    width: 144px;
-    height: 48px;
+    height: 60px;
 }
 
 .footer-message{
+    font-size: 22px;
     padding-bottom: 6px;
 }
 
-@media only screen and (max-width: 825px) {
+@media only screen and (max-width: 850px) {
     /*Header*/
     .header-container{
         margin: 0;
@@ -334,6 +333,10 @@ label{
 
     .hide{
         display: block;
+    }
+
+    .content{
+        margin-bottom: 136px;
     }
 
     #nav-checkbox:checked ~ .mobile-display{

@@ -60,8 +60,8 @@ label,
 
 .image-preview{
     border-radius: 5px 5px 0px 0px;
-    margin-bottom: -20px;
-    margin-top: 16px;
+    margin-bottom: -28px;
+    margin-top: 20px;
     height: 400px;
     object-fit: cover;
     width: 100%;
@@ -74,6 +74,7 @@ label,
 
 .button-form,
 .delete-button{
+    margin-bottom: 40px;
     color: white;
     margin-top: 16px;
     transition: 0.2s all ease-in;
@@ -87,6 +88,10 @@ label,
     cursor: pointer;
 }
 
+.margin{
+    margin-bottom: 0px;
+}
+
 .button-form:hover,
 .delete-button:hover{
     transition: 0.2s all ease-in;
@@ -94,7 +99,7 @@ label,
 }
 
 label{
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 textarea{
@@ -122,6 +127,9 @@ textarea{
     .button-bottom{
         gap: 8px;
     }
+    .margin{
+        margin-bottom: 40px;
+    }
     .movie-create-between{
         height: 476.5px;
         display: flex;
@@ -140,5 +148,10 @@ textarea{
     }
     .movie-create-image-button{
         height: 45px;
+    }
+    .image-preview{   
+        margin-bottom: -24px;
+        margin-top: 24px;
+        height: 397px;
     }
 }

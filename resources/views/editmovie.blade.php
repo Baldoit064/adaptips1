@@ -54,7 +54,7 @@
         </div>
         <div class="button-bottom">
             <div class="movie-create-mobile">
-                <button class="button-form" form="edit-movie" type="submit">EDITAR FILME</button>
+                <button class="button-form margin" form="edit-movie" type="submit">EDITAR FILME</button>
             </div>
             <button type="submit" form="delete-movie" class="delete-button">APAGAR FILME</button>
         </div>

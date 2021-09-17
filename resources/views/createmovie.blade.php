@@ -47,7 +47,6 @@
                     <img class="image-preview" src="{{ asset('images/placeholder.png') }}" alt="Imagem" width="100" height="100">
                 </div>
                 <div class="movie-create-mobile">
-                    <div class="top-space"></div>
                     <label for="image" class="movie-create-image-button">SELECIONAR IMAGEM</label>
                     <input class="input-form movie-create-image" type="file" name="image" id="image" accept='image/*' required> 
                 </div>

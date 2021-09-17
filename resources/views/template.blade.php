@@ -18,18 +18,18 @@
 <body>
     <header class="header-container"> 
         <div class="header-align">
-            <a href="{{ route('movie.index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"class="logo"></a>
             <input type="checkbox" name="checkbox" id="nav-checkbox" class="nav-checkbox">
-            <label for="nav-checkbox" class="nav-toggle">
-                <img src="{{ asset('images/menu.svg') }}" alt="menu icon" class="menu">
-                <img src="{{ asset('images/close.svg') }}" alt="close icon" class="close">
-            </label>
-            <a href="{{ route('movie.index') }}" class="start mobile-display">INICIO</a>
-            <a href="{{ route('movie.create') }}" class="create-container mobile-display"><button class="create-button">ADICIONAR FILME</button></a>
+            <div class="hide">
+                <a href="{{ route('movie.index') }}"><img src="{{ asset('images/logo.svg') }}" alt="Logo"class="logo"></a>
+                <label for="nav-checkbox" class="nav-toggle">
+                    <img src="{{ asset('images/menu.svg') }}" alt="menu icon" class="menu">
+                    <img src="{{ asset('images/close.svg') }}" alt="close icon" class="close">
+                </label>
+                <a href="{{ route('movie.index') }}" class="start mobile-display">INICIO</a>
+                <a href="{{ route('movie.create') }}" class="create-container mobile-display"><button class="create-button">ADICIONAR FILME</button></a>
+            </div>
         
-            <nav class="nav-container mobile-display">
-                @yield('navbar')
-            </nav>
+            @yield('navbar')
         </div>
     </header>
 

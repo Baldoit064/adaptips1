@@ -15,7 +15,6 @@
 /*Header*/
 .header-container{
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -27,13 +26,13 @@
 .header-align{
     display: flex;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
 }
 
 .logo{ 
     width: 180px;
     height: 60px;
-    margin-left: 6px;
+    margin-left: 8px;
 }
 
 .logo:hover{
@@ -42,9 +41,9 @@
 }
 
 .start{
+    margin-left: 16px;
     font-weight: bold;
     font-size: 20px;
-    margin-left: 16px;
     color: var(--secondary-color);
     text-decoration: none;
 }
@@ -56,6 +55,7 @@
 
 .create-container{
     margin-left: 16px;
+    margin-right: 8px;
 }
 
 .create-button{
@@ -78,7 +78,7 @@
 /*Navbar*/
 
 .nav-container{
-    margin-left: 16px;
+    margin-right: 8px;
 }
 
 .nav-form{
@@ -143,18 +143,25 @@
     text-decoration: underline;
 }
 
+.hide{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
-  }
+}
   
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: white;
-  }
+}
   
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: white;
-  }
+::-ms-input-placeholder { /* Microsoft Edge */
+        color: white;
+}
 
 /*Body*/
 
@@ -170,11 +177,9 @@ label{
     margin-bottom: 96px;
     margin-left: 16px;
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     grid-template-rows: 1fr; 
-    gap: 8px 8px; 
-    grid-template-areas: 
-      ". . . . ."; 
+    gap: 16px 24px; 
     margin-right: 16px;
 }
 
@@ -189,7 +194,6 @@ label{
 .movie-card{
     word-break: break-all;
     box-shadow: 0px 0px 5px black;
-    height: 100%;
     width: 100%;
     border-radius: 5px;
     text-align: center;
@@ -198,6 +202,10 @@ label{
     color: white;
     border: 1px solid black;
     margin-top: 8px;
+}
+
+.movie-card:hover{
+    transform: scale(1.025, 1.025);
 }
 
 .movie-title{
@@ -212,19 +220,22 @@ label{
 }
 
 .movie-card-button{
-    gap: 5px;
-    display: flex;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-top: -8px;
+    gap: 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
 
 .movie-button{
+    width: 100%;
     font-size: 24px;
     cursor: pointer;
     margin: 3px 0px;
     background-color: var(--secondary-color);
     color: white;
-    border-color: var(--main-color);
-    border-radius: 5px;
     padding: 5px;
     font-weight: bold;
 }
@@ -269,94 +280,76 @@ label{
     padding-bottom: 6px;
 }
 
-@media only screen and (max-width: 1700px){ 
-    .content{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-          ". . . ."; 
-    }
-}
-
-@media only screen and (max-width: 1400px){ 
-    .content{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
-          ". . ."; 
-    }
-}
-
-@media only screen and (max-width: 1000px){
-    /*Header*/
-    .create-button{
-        padding: 2px 12px;
-    }
-    /*Body*/
-    .content{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-          ". ."; 
-    }
-}
-
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 825px) {
     /*Header*/
     .header-container{
         margin: 0;
         display: flex;
         flex-direction: column;
     }
+
     .header-align{
         width: 100%;
         margin: 0;
         flex-direction: column;
     }
+
     .nav-container{
         margin: 0px;
-        float: none;
         flex-direction: column;
         margin-bottom: 8px;
     }
+
+    .logo{
+        margin: 0px;
+    }
+
     .start{
-        margin: 0;
+        margin: 0px;
         margin-bottom: 8px;
     }
+
     .create-container{
-        margin: 0;
+        margin: 0px;
         margin-bottom: 8px;
     }
+
     .nav-toggle{
         margin-top: 3px;
         display: inline;
     }
+
     .nav-toggle:hover{
         transition: 0.2s all ease-in;
         filter: brightness(110%);
     }
+
     .close{
         display: none;
     }
+
     .mobile-display{
         display: none;
     }
+
+    .hide{
+        display: block;
+    }
+
     #nav-checkbox:checked ~ .mobile-display{
         display: block;
     }
 
-    #nav-checkbox:checked ~ label.nav-toggle .close{
+    #nav-checkbox:checked ~ .hide .mobile-display{
         display: block;
     }
 
-    #nav-checkbox:checked ~ label.nav-toggle .menu{
+    #nav-checkbox:checked ~ .hide label.nav-toggle .close{
+        display: block;
+    }
+
+    #nav-checkbox:checked ~ .hide label.nav-toggle .menu{
         display: none;
     }
 
-}
-
-@media only screen and (max-width: 700px) {
-    /*Body*/
-    .content{
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-          "."; 
-    }
 }

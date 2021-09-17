@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="movie-create-container edit-container">
-    <form class="movie-create-form" id="form-create" action="{{ route('movie.update', $movie->id) }}" method="POST" enctype="multipart/form-data">
+    <form class="movie-create-form" id="edit-movie" action="{{ route('movie.update', $movie->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div>
@@ -52,15 +52,17 @@
                 </div>
             </div>
         </div>
+        <div class="button-bottom">
+            <div class="movie-create-mobile">
+                <button class="button-form" form="edit-movie" type="submit">EDITAR FILME</button>
+            </div>
+            <button type="submit" form="delete-movie" class="delete-button">APAGAR FILME</button>
+        </div>
     </form>
-    <div class="button-bottom">
-        <div class="movie-create-mobile">
-                    <button class="button-form" type="submit">EDITAR FILME</button>
-                </div>
-        <form class="delete-form" action="{{ route('movie.destroy', $movie->id) }}" method="POST">
+    <div>
+        <form class="delete-form" id="delete-movie" action="{{ route('movie.destroy', $movie->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <button type="submit" class="delete-button">APAGAR FILME</button>
         </form>
     </div>
 </div>

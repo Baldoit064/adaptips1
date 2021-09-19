@@ -49,7 +49,7 @@
             <img src="{{ asset('images/linkedin.svg') }}" alt="linkedin icon" class="footer-icon">
         </a>    
         <p class="footer-message">
-            Desenvolvido por Nicolas Resende - Processo Seletivo 2021/2 Adapti-Soluções Web
+            Desenvolvido por Nicolas Resende - 2021
         </p>
     </footer>
 
